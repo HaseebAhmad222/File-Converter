@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileConverterPro | Multi-Format File Converter</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-file-alt"></i>
+            <h1>FileConverterPro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn login">Login</button>
+            <button class="btn signup">Sign Up</button>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Convert, Edit & Compress Files for Free</h2>
+                <p>All-in-one online tool for your document, image, and PDF needs</p>
+                <div class="file-dropzone" id="dropzone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop files here or click to browse</p>
+                    <input type="file" id="fileInput" multiple>
+                </div>
+                <div class="supported-formats">
+                    <span>Supports: PDF, DOCX, XLSX, PPTX, JPG, PNG, and more</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-tools" id="tools">
+            <h3>Popular Tools</h3>
+            <div class="tools-grid">
+                <!-- PDF Tools -->
+                <div class="tool-card" data-tool="pdf-to-word">
+                    <i class="fas fa-file-word"></i>
+                    <h4>PDF to Word</h4>
+                </div>
+                <div class="tool-card" data-tool="pdf-to-excel">
+                    <i class="fas fa-file-excel"></i>
+                    <h4>PDF to Excel</h4>
+                </div>
+                <div class="tool-card" data-tool="pdf-to-ppt">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <h4>PDF to PPT</h4>
+                </div>
+                <div class="tool-card" data-tool="pdf-to-jpg">
+                    <i class="fas fa-file-image"></i>
+                    <h4>PDF to JPG</h4>
+                </div>
+                <div class="tool-card" data-tool="merge-pdf">
+                    <i class="fas fa-object-group"></i>
+                    <h4>Merge PDF</h4>
+                </div>
+                <div class="tool-card" data-tool="split-pdf">
+                    <i class="fas fa-cut"></i>
+                    <h4>Split PDF</h4>
+                </div>
+                <div class="tool-card" data-tool="compress-pdf">
+                    <i class="fas fa-compress-alt"></i>
+                    <h4>Compress PDF</h4>
+                </div>
+                <div class="tool-card" data-tool="jpg-to-pdf">
+                    <i class="fas fa-file-pdf"></i>
+                    <h4>JPG to PDF</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h3>Powerful Features</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Fast Conversion</h4>
+                    <p>Convert files in seconds with our high-speed processing engine.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h4>Secure Processing</h4>
+                    <p>Your files are protected and automatically deleted after processing.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cloud"></i>
+                    <h4>Cloud Integration</h4>
+                    <p>Connect with Google Drive, Dropbox, and OneDrive for easy access.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Mobile Friendly</h4>
+                    <p>Works perfectly on all devices, from desktop to smartphone.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="about">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h4>About FileConverterPro</h4>
+                <p>Free online tool for all your document conversion and editing needs. No installation required.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> support@fileconverterpro.com</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FileConverterPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for file conversion -->
+    <div class="modal" id="conversionModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Convert File</h3>
+            <div class="modal-body">
+                <div class="file-preview" id="filePreview">
+                    <!-- File preview will be shown here -->
+                </div>
+                <div class="conversion-options" id="conversionOptions">
+                    <!-- Conversion options will be dynamically inserted here -->
+                </div>
+                <button class="btn convert-btn" id="startConversion">Convert Now</button>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="download-section" id="downloadSection">
+                    <!-- Download link will appear here after conversion -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/converter.js"></script>
+    <script src="scripts/offline.js"></script>
+    <!-- Free libraries for file conversion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/docx@7.8.2/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>
